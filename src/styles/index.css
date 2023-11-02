@@ -1,0 +1,275 @@
+/*
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*/
+
+@font-face {
+  font-family: gadugi;
+  src: url("../assets/gadugi-normal.ttf");
+}
+
+/*
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400&family=Unna:ital,wght@0,400;0,700;1,400&display=swap");
+@font-face {
+  font-family: recoleta;
+  src: url("../assets/Recoleta-RegularDEMO.otf");
+}
+@font-face {
+  font-family: galanogrotesque;
+  src: url("../assets/GalanoGrotesqueDEMOBold.otf");
+}
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --maxWidth: 1530px;
+
+  --fondo: #d9d9d9;
+  --fondoDark: #23212e;
+
+  --fontColor1: #222222;
+  --fontColorDark: #e3e3e3;
+
+  --rojo: #da3737;
+  --purple: #1c0f18;
+  --blanco: #ffffff;
+
+  /* BRAND COLLOR PALETTE*/
+  --yellow: #f0d739;
+  --golden: #c48e45;
+  --light-grey: #828485;
+  --dark-grey: #414646;
+  --black: #111111;
+  --azul: #0D2DB1;
+
+  /* FONT FAMILY */
+  color: var(--black);
+  /*
+  font-family: 'gadugi', sans-serif;
+  font-family: 'Noto Serif', serif;
+  */
+  font-family: 'gadugi', sans-serif;
+  font-weight: 500;
+  /* font-family: 'Rowdies', cursive; */
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 0.3s ease;
+
+  list-style: none;
+}
+
+/* CHANGES COLOR SELECTION*/
+*::selection {
+  background: var(--azul);
+  color: white;
+}
+
+/* FONT TITLE */
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/* IMAGES SATURATION */
+.image--saturation {
+  filter: grayscale(100%) contrast(0.8);
+  cursor: pointer;
+}
+
+.image--saturation:hover {
+  filter: grayscale(0%) contrast(1);
+}
+
+.image--filter--tag:hover .image--saturation {
+  background-color: red;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+  /*
+  font-weight: 600;
+  */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.allWidth {
+  /*
+  background-color: #CC92BE;
+  */
+  padding: 80px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.allWidthGallery {
+  padding: 80px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.allWidthNewGallery {
+  /*
+  background-color: #CC92BE;
+  */
+  padding: 80px 50px;
+  display: flex;
+  height: auto;
+  align-items: center;
+justify-content: center;
+  position: relative;
+}
+
+.allWidthContact {
+  /*
+  padding: 60px 50px;
+
+  */
+  padding: 0px 50px 0px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+
+  height:100vh;
+  /*
+  margin-top: 14px;
+  */
+}
+
+.active {
+  border-bottom: 2px solid var(--azul);
+  color: var(--azul);
+}
+
+.subActive {
+  border-bottom: 2px solid var(--light-grey);
+  color: var(--light-grey);
+}
+
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+.scroll-area {
+  scroll-snap-align: start;
+}
+
+/* ANIMATIONS */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  100% {
+    opacity: 0;
+  }
+
+  0% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fade-out-in {
+  0% {
+    opacity: 1;
+  }
+  23% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: 0;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  76% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes move-out {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/* Other screens */
+
+@media only screen and (max-width: 1024px) {
+  .allWidthGallery {
+    padding: 0px 10px;
+    flex-direction: column-reverse;
+    height: 100dvh;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .allWidth {
+    padding: 0px 10px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
+
+
+@media only screen and (max-width: 550px) {
+  .allWidthGallery{
+    height: 90dvh;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .allWidthContact {
+    padding: 0px 10px;
+    height: 100%;
+  }
+
+.allWidthNewGallery {
+    height: 100dvh;
+    padding: 0 20px;
+    margin-bottom: 200px;
+}
+}
+

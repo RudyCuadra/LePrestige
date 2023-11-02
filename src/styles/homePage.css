@@ -1,0 +1,169 @@
+/*** WHATWEDO HOMEPAGE ***/
+.wwd--container {
+  /*background-color: #0f882f;*/
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 100%;
+  padding-right: 40px;
+}
+
+.wwd-title {
+  font-family: 'Unna', serif;
+  font-size: 2.8rem;
+  padding: 0 25px 25px 0;
+}
+
+.wwd-parr {
+  width: 420px;
+}
+
+.wwd-sentence {
+  font-size: 1rem;
+  padding-bottom: 10px;
+}
+
+.wwd-sentence:nth-last-child(1) {
+  padding-bottom: 0;
+}
+
+/*** GALLERY HOMEPAGE ***/
+.gallery--homepage {
+  /*
+  background-color: aquamarine;
+  */
+  height: 250px;
+  width: auto;
+  overflow: hidden;
+  display: flex;
+  overflow-x: scroll;
+  clip-path: polygon(0% 0%, 85% 0, 100% 90%, 15% 90%);
+  /*
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  transform: skewX(30deg);
+  */
+}
+
+/*
+.inner{
+  display: flex;
+  width: 100%;
+
+  transform: skewX(-30deg);
+}
+*/
+.gallery--homepage::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: skewX(200px);
+  transform-origin: 50% 0;
+  outline: 1px solid transparent;
+  backface-visibility: hidden;
+}
+
+.miniGallery--homepage {
+  height: 100%;
+}
+
+/*** VIDEO HOMEPAGE ***/
+.video--homepage {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.video--description {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.video--text {
+  /*
+  width: 400px;
+  */
+  width: 320px;
+  font-weight: 300;
+}
+
+.company--logos {
+  /*
+  height: 200px;
+  background-color: aquamarine;
+  width: 100%;
+  */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 1020px) {
+  .company--logos {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .wwd--container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact--container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /*
+  .company--logos{
+    width: 90vw;
+    height: auto;
+    flex-direction: column;
+  }
+    */
+}
+
+@media only screen and (max-width: 550px) {
+  .gallery--homepage {
+    flex-direction: column;
+    height: 400px;
+    width: 70vw;
+    overflow-y: scroll;
+  }
+
+  .wwd--container {
+    gap: 10px;
+    padding-right: unset;
+    padding: 0 20px;
+  }
+
+  .wwd-title {
+    padding: 20px 0;
+  }
+
+  .wwd-parr {
+    width: unset;
+  }
+
+  .video--text {
+    width: auto;
+    padding: 0 20px;
+  }
+
+  .video--homepage {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

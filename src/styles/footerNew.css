@@ -1,0 +1,148 @@
+.footerNew {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 60px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.footerContact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 40px;
+}
+
+.footerPhone {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.iconsFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+.iconsFooter>a>svg {
+    transition: ease all 0.1s;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.iconsFooter>a>svg:hover {
+    fill: var(--azul);
+}
+
+.footerText>p {
+    font-size: 0.4rem;
+}
+
+.footerBold {
+    font-weight: 700;
+}
+
+/* FOOTER CONTACT */
+
+.footerWraper {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footerLeft {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 450px;
+}
+
+.footerRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerInfo {
+    /*
+    width: 200px;
+    */
+    width: 240px;
+    font-size: 0.8rem;
+}
+
+.footerTitle {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/*
+@media only screen and (max-width: 820px) {
+    .footerWraper{
+        margin-bottom: 200px;
+    }
+    .footerLeft{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+*/
+@media only screen and (max-width: 550px) {
+
+    .footerWraper {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px
+    }
+
+    .footerPhone {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .footerLeft {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .footerRight {
+        align-items: center;
+        width: 100%;
+    }
+
+    .footerInfo {
+        font-size: 1rem;
+    }
+
+    .footeSubContact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .contactLeft{
+        max-width: 350px;
+    }
+}

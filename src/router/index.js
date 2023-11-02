@@ -1,0 +1,6 @@
+export { AppRouter } from "./AppRouter"
+export { AccesoriesRoutes } from "./AccesoriesRoutes"
+export { CommercialRoutes } from "./CommercialRoutes"
+export { ResidentialRoutes } from "./ResidentialRoutes"
+export { MillworkRoutes } from "./MillworkRoutes"
+export { FurnitureRoutes } from "./FurnitureRoutes"

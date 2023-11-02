@@ -1,0 +1,147 @@
+.revewContainer {
+    background-color: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+}
+
+.reviewWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    max-width: 1300px;
+}
+
+.exitReview {
+    position: absolute;
+    top: 15vh;
+    right: 10vh;
+    cursor: pointer;
+}
+
+.reviewCardContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+	gap:20px;
+	/*
+	flex-wrap:wrap;
+	*/
+}
+
+.reviewTitle {
+    font-size: 2rem;
+    font-weight: lighter;
+    color: black;
+    text-align: center;
+}
+
+.reviewCard {
+    width: 400px;
+    background: white;
+
+    box-shadow: 4px 5px 3px 0px rgba(191, 191, 191, 0.75);
+    -webkit-box-shadow: 4px 5px 3px 0px rgba(191, 191, 191, 0.75);
+    -moz-box-shadowr: 4px 5px 3px 0px rgba(191, 191, 191, 0.75);
+
+    max-height: 500px;
+    height: 60vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.reviewCardInside{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+}
+
+.reviewCardIMG {
+    width: 100px;
+    height: 100px;
+    background-color: var(--light-grey);
+}
+
+.star {
+    fill: var(--yellow);
+    font-size: 1.2rem;
+}
+.reviewCardWrapTexts{
+    height: 200px;
+    /*
+    overflow: hidden;
+    */
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.reviewCardTexts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10px;
+
+    /*
+    max-height: 200px;
+    */
+    height: 100%;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.reviewCardTitle {
+    color: #373c47;
+}
+
+.reviewCardText {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.reviewCardAuthor {
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: bold;
+    color: #373c47;
+}
+
+/* TABLET MODE */
+@media (max-width: 840px) {
+    .reviewWrapper {
+        height: 100dvh;
+    }
+
+    .reviewCard {
+        width: 200px;
+        height: 360px;
+    }
+
+    .reviewCardTitle {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .reviewCardText {
+        font-size: 0.8rem;
+    }
+
+    .reviewCardAuthor {
+        font-size: 0.7rem;
+    }
+}

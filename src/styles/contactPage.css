@@ -1,0 +1,93 @@
+.contactContainer {
+  display: flex;
+  /*
+  height: calc(100vh - 120px);
+  */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contactTitle {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.contactWrapper {
+  display: flex;
+  gap: 80px;
+}
+
+.contactLeft {
+  max-width: 500px;
+}
+
+.contactSubtitle {
+  width: 340px;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.contactParr {
+  font-size: 0.8rem;
+  width: 400px;
+  padding: 10px 0;
+}
+
+.contactParr:nth-last-child(2) {
+  margin-bottom: 20px;
+}
+
+.mapLink:hover{
+  color: var(--azul);
+}
+
+.reviewBtn, .reviewBtnV2{
+  color: white;
+  font-size: 0.75rem;
+  font-family: 'gadugi', sans-serif;
+  letter-spacing: 1rem;
+  text-align: center;
+  margin: 40px 0;
+  padding: 10px ;
+  padding-left: 30px;
+  cursor: pointer;
+  border: transparent;
+}
+.reviewBtn{
+  background-color: black;
+}
+
+.reviewBtn:hover{
+  color:white;
+  background: var(--azul);
+}
+
+.reviewBtnV2:hover{
+  color:white;
+  background: var(--azul);
+}
+
+
+@media (max-width: 820px) {
+  .contactWrapper {
+    gap: unset;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contactTitle {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .contactWrapper {
+    flex-direction: column;
+  }
+
+  .contactLeft {
+    width: 100%;
+    padding: 0 10px;
+  }
+}

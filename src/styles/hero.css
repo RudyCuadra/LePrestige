@@ -1,0 +1,287 @@
+.heroSlider--container {
+	width: 100%;
+	height: calc(100vh - 60px);
+	/*
+	height: 70vh;
+	background: lightblue;
+	 */
+	overflow: hidden;
+	position: relative;
+}
+
+.heroIMG {
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+	height: 20vh;
+}
+
+.heroTextsContainer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.2);
+	cursor: default;
+}
+
+.heroTextWrapper {
+	display: flex;
+	position: absolute;
+	bottom: 20px;
+}
+
+.heroTextCapital {
+	color: white;
+	font-size: 2.6rem;
+	padding: 0 40px;
+	font-weight: lighter;
+	animation-name: fade-in;
+}
+
+.heroTextCapital:nth-child(2) {
+	border-left: 2px solid white;
+	border-right: 2px solid white;
+}
+
+.heroTextCapital:hover {
+	color: var(--azul);
+	cursor: pointer;
+}
+
+.hideUnder {
+	color: white;
+	font-size: 2.6rem;
+	padding: 0 40px;
+	font-weight: lighter;
+	animation-name: fade-out;
+	opacity: 0;
+}
+
+.backdropHero {
+	position: relative;
+	/*
+	 */
+	background: rgba(255, 255, 255, 0.7);
+	backdrop-filter: blur(20px);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	animation-name: fade-in;
+	animation-duration: 1s;
+}
+
+.backdropFadeOut {
+	animation-name: fade-out;
+	animation-duration: 1s;
+}
+
+.backdropHeroText {
+	border-radius: 20px;
+	width: 400px;
+	max-height: 500px;
+	height: 90%;
+	margin-top: 30px;
+	padding: 30px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.backdropTitle {
+	font-size: 3rem;
+	font-weight: 300;
+	color: var(--azul);
+}
+
+.backdropHeroText>p {
+	text-align: justify;
+}
+
+.backdropButton {
+	padding: 10px 20px;
+	background-color: transparent;
+	color: rgba(0, 0, 0, 0.7);
+	border: none;
+	cursor: pointer;
+}
+
+.backdropButton:hover {
+	background-color: white;
+}
+
+.noDisplay {
+	animation-name: fade-out;
+	animation-duration: 1s;
+	display: none;
+}
+
+.heroMobile {
+	display: none;
+}
+
+.heroDesktop {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#videoBg {
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+}
+
+.exitHeroView {
+	position: absolute;
+	top: 20vh;
+	right: 30vh;
+	font-size: 1.2rem;
+	cursor: pointer;
+	fill-opacity: 0.5;
+}
+
+.exitHeroView:hover {
+	background-color: rgba(255, 255, 255, 1);
+	fill: transparent;
+}
+
+/* Hero Slideshow */
+.heroSliderImgContainer{
+	aspect-ratio:16/9;
+	display: flex;
+	/*
+	justify-content: center;
+	align-items: flex-start;
+	margin-bottom: 50px;
+	 */
+	overflow: hidden;
+
+	/* Loop animation slideshow anterior
+	animation: endlesLoop 512s linear infinite;
+	*/
+	/*width: calc(2000px * 3);*/
+	/*width: calc(100vw * 600);
+	height: calc(100vh - 60px);
+	*/
+}
+.heroSliderImgContainer>img{
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	margin:auto;
+	height: 100%;
+	width:100%;
+	object-fit: cover;
+}
+.calcOpacity{
+	transition: ease-in-out all 1s;
+	opacity:0;
+}
+.zIndex3{
+	z-index:4;
+}
+.zIndex2{
+	z-index:3;
+}
+.zIndex1{
+	z-index:2;
+}
+
+/*
+.heroSliderImgContainer>img:nth-child(3){
+	animation: fade-out-in 60s linear infinite;
+}
+.heroSliderImgContainer>img:nth-child(2){
+	animation: fade-out-in 30s linear infinite;
+	animation-delay: 23s
+}
+*/
+
+/*
+.heroSliderImag{
+	height: 100%;
+	object-fit: contain;
+}
+*/
+
+/* Pantallas 4k */
+@media (min-width: 2560px) {
+	.exitHeroView {
+		font-size: 3rem;
+	}
+}
+
+@media (max-width: 550px) {
+	.heroSlider--container {
+		height: calc(100dvh - 60px);
+	}
+
+	.exitHeroView {
+		position: absolute;
+		top: 10vh;
+		right: 5vh;
+		font-size: 1.2rem;
+	}
+
+	.heroTextsContainer {
+		flex-direction: column;
+		align-items: center;
+		gap: 40px;
+	}
+
+	.heroTextWrapper {
+		bottom: 10vh;
+	}
+
+	.heroTextCapital {
+		font-size: 1.2rem;
+		padding: 5px 20px;
+	}
+
+	.heroTextCapital:nth-child(2) {
+		border-left: 0.5px solid white;
+		border-right: 0.5px solid white;
+	}
+
+	.heroTextsContainer>h2:nth-child(2) {
+		border-left: unset;
+		border-right: unset;
+	}
+
+	.backdropHeroText {
+		height: 70%;
+	}
+
+	/*
+	#videoBg {
+		display: none;
+	}
+	 */
+
+	.heroMobile {
+		display: flex;
+		height: 100vh;
+		object-fit: cover;
+	}
+}
+
+/* SMALL PHONES */
+@media (max-width: 380px) {
+	.backdropHeroText>p {
+		width: 300px;
+	}
+}

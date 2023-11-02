@@ -1,0 +1,402 @@
+.mainGallery {
+    /*
+    width: 100%;
+    background-color: antiquewhite;
+    */
+    background-color: white;
+    height: calc(100dvh - 165px);
+    aspect-ratio: 16 / 9;
+    position: relative;
+    user-select: none;
+}
+.mainGallery::selection {
+  background: none;
+  color:none;
+}
+
+.asideGallery {
+    border-top: 2px solid var(--azul);
+    border-bottom: 2px solid var(--azul);
+    height: calc(100dvh - 165px);
+    padding: 0 20px;
+    padding-top: 20px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.mainGDesc {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+}
+
+.carreteContainer {
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    left: 0;
+    top:0;
+    bottom:0;
+    margin: auto 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    
+    /*
+    width: 520px;
+    right: 180px;
+    */
+    opacity: 1;
+}
+.carreteContainer>svg {
+    font-size: 1.4rem;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.6);
+    /* After FullScreenChange */
+    z-index:2;
+}
+.mainIMGGallery {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    /* After FullScreenChange */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.carreteContainer:hover {
+    opacity: 1;
+}
+.mainIMGGallery:hover + .carreteContainer {
+    opacity: 1;
+}
+.arrowsGallery{
+    opacity: 0;
+}
+.carreteContainer:hover .arrowsGallery {
+    opacity: 1;
+}
+.arrowsGallery:hover{
+    opacity: 1;
+}
+.fullScControllers, .exitBigIMg{
+    display:none;
+}
+/*
+.exitBigIMg {
+    position: absolute;
+    top: -9px;
+    right: -30px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+*/
+
+.carreteIMGInside {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.mainGText {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 5px 20px;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.mainGTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+.subInfoG {
+    color: var(--light-grey);
+}
+
+
+
+.carreteIMGWrapper {
+    height: 58px;
+    width: 330px;
+    overflow: hidden;
+
+    /*
+    display: -webkit-inline-box;
+    */
+    display: inline-flex;
+    gap: 20px;
+    position: relative;
+}
+
+.crSquare {
+    background: transparent;
+    border: 4px solid white;
+    width: 54px;
+    height: 58px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    /*
+    width: 58px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    */
+    z-index: 2;
+}
+
+.carreteIMG {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    /*
+    cursor: pointer;
+    */
+}
+
+.showOnMobile {
+    display: none;
+}
+
+
+.moveCarrete {
+    /*
+    background-color: plum;
+    width: 100%;
+    */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/*  Materiales  */
+.descMaterial {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 130px;
+    padding: 5px;
+    position: absolute;
+    left: 40px;
+    opacity: 0;
+}
+
+.descMaterial>h3 {
+    font-family: 'gadugi', sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.descMaterial>p {
+    font-family: 'gadugi', sans-serif;
+    font-size: 0.7rem;
+}
+
+.material:hover .descMaterial {
+    opacity: 1;
+}
+
+.material {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: white;
+    border: 1px solid var(--golden);
+    cursor: pointer;
+}
+
+.material01 {
+    position: absolute;
+    bottom: 30%;
+    right: 30%;
+}
+
+.material02 {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.material03 {
+    position: absolute;
+    top: 30%;
+    right: 20%;
+}
+
+.exitOnClick{
+    position: absolute;
+
+    /*
+    background-color: red;
+    */
+    height: 100vh;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .mainGallery {
+        height: calc(100dvh - 250px);
+        width: 100%;
+    }
+
+    .asideGallery {
+        padding: unset;
+        height: unset;
+        width: 100%;
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .mainGTitle {
+        margin-bottom: usnet;
+    }
+
+    .mainGDesc {
+        flex-direction: unset;
+        /*
+        width: 100%;
+        */
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 840px) {
+    .mainGallery{
+        width: 100%;
+    }
+
+    .carreteContainer {
+        /*
+        display: none;
+         */
+    position: relative;
+    height: 100%;
+    bottom: 10px;
+    justify-content: space-between;
+    opacity: unset;
+}
+.mainIMGGallery{
+    height: 100%;
+}
+.fullScControllers{
+    display:block;
+    z-index: 3;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: rgba(255, 255, 255, 0.6);
+    font-size: 1.8rem;
+    padding: 5px 5px 1px 5px;
+    text-align: center;
+    cursor:pointer;
+}
+/*
+.arrowsGallery{
+    opacity: unset;
+}
+*/
+
+.exitBigIMg {
+    display:flex;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 3;
+}
+.showOnMobile {
+    position: absolute;
+    bottom: -20%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    /*
+    width: 520px;
+     */
+}
+
+.showOnMobile>svg {
+    fill: var(--golden);
+    font-size: 2.5rem;
+}
+
+.descMaterial {
+    width: 130px;
+    padding: 5px;
+    left: unset;
+    right: 40px;
+}
+
+.material01 {
+    bottom: 38%;
+    right: 20%;
+}
+
+.crSquare {
+    border: 8px solid var(--golden);
+}
+
+}
+
+@media (max-width: 550px) {
+    .carreteContainer{
+    height: calc(100vh - 240px);
+    }
+    .carreteContainer>svg {
+        font-size: 2rem;
+    }
+    .fullScControllers{
+        top:0px;
+        left: 10px;
+        font-size: 1.4rem;
+        padding: 5px 5px 1px 5px;
+    }
+    .asideGallery {
+        flex-direction: column;
+        margin: 10px 0;
+        padding: 10px 0;
+    }
+
+    .mainGallery {
+        margin-top: 40px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .showOnMobile {
+        bottom: -10%;
+    }
+
+    .exitBigIMg {
+        top: 0px;
+        right: 10px;
+        font-size: 1.4rem;
+        /*
+        background: white;
+        */
+    }
+}

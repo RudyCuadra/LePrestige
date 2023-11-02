@@ -1,0 +1,67 @@
+.allWidthAccesories {
+    padding: 80px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+}
+
+.accesoriesPasarela {
+    /*
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:20px;
+    */
+    width: 100%;
+    max-width: 900px;
+    max-height: 600px;
+    height: calc(100vh - 120px);
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: dense;
+    grid-auto-flow: dense;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pasarelaIMG {
+    width: 220px;
+    height: 220px;
+}
+
+.pasarelaIMG>a>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+    .accesoriesPasarela {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .accesoriesPasarela {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .accesoriesPasarela {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pasarelaIMG {
+        width: 150px;
+        height: 150px;
+    }
+}

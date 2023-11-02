@@ -1,0 +1,140 @@
+.contact--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*
+  background-color: chocolate;
+  */
+}
+
+.contact__map {
+  height: 330px;
+}
+
+.form--container {
+  display: flex;
+  flex-direction: column;
+  /*
+  background-color: red;
+  padding-left: 40px;
+  */
+}
+
+.newForm {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formGroup1 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.formGroup2,.formGroup2V2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+}
+.formGroup2V2{
+  align-items: center;
+}
+
+.newInputForm {
+  padding: 10px;
+  width: 100%;
+}
+
+.newInputFormError {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid var(--rojo);
+  outline-color: var(--rojo);
+}
+
+.newTextarea {
+  width: 100%;
+  height: 150px;
+}
+
+.newFormBtn,
+.newFormBtnErrors {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  
+}
+.newFormBtn:hover{
+  background: var(--azul);
+}
+
+.newFormBtnErrors {
+  background-color: var(--light-grey);
+  cursor: not-allowed;
+}
+
+/*** HANDLING ERRORS ***/
+.newformError {
+  background-color: var(--rojo);
+  color: white;
+  font-size: 0.85rem;
+  padding: 1px 4px;
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+.newformError>svg {
+  fill: white;
+}
+
+.rankingReview{
+  margin-top: 10px;
+}
+.UnRankedStar, .RankedStar{
+  font-size: 2.3rem;
+  margin-right: 10px;
+  fill: var(--light-grey);
+  cursor: pointer;
+}
+.RankedStar{
+  fill:var(--yellow)
+}
+
+@media only screen and (max-width: 840px) {
+  .contact--container {
+    gap: unset;
+    flex-direction: unset;
+  }
+
+  .form--container {
+    padding-left: unset;
+  }
+
+  .newInputForm,
+  .newTextarea {
+    width: 100%;
+  }
+
+  .new--InputForm {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .newForm {
+    width: 90vw;
+  }
+}
