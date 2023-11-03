@@ -1,11 +1,56 @@
-/* PopupBanner.css */
+/* Estilos generales del banner */
+.popup-banner {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para dispositivos de pantalla pequeña (por ejemplo, móviles) */
+@media (max-width: 768px) {
+  .popup-content {
+    padding: 10px; /* Ajusta el relleno para dispositivos pequeños */
+    max-width: 80%; /* Limita el ancho del banner en dispositivos pequeños */
+  }
+}
+
+/* Estilos para tabletas y pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .popup-content {
+    max-width: 60%; /* Cambia el ancho máximo del banner para tabletas */
+  }
+}
+
+/* Estilos para pantallas grandes (computadoras de escritorio) */
+@media (min-width: 1025px) {
+  .popup-content {
+    max-width: 50%; /* Cambia el ancho máximo del banner para pantallas grandes */
+  }
+}
+
+
+
+/* 
 .popup-banner {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para oscurecer la página */
+    background-color: rgba(0, 0, 0, 0.5); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +63,7 @@
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    position: relative; /* Para alinear el botón dentro del contenido */
+    position: relative; 
   }
   
   h2 {
@@ -40,4 +85,4 @@
     right: 10px;
   }
   
-  
+   */

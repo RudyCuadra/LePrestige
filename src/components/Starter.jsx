@@ -15,7 +15,7 @@ export const Starter = () => {
 
   useEffect(() => {
     // Simula la duración de la animación (ajusta la duración según tu animación)
-    const animationDuration = 3000; // 6 segundos
+    const animationDuration = 6000; // 6 segundos
 
     const animationTimeout = setTimeout(handleAnimationComplete, animationDuration);
 
@@ -29,7 +29,35 @@ export const Starter = () => {
 
   return (
     <div>
-    <motion.div className="animation--container"
+      <motion.div
+  className="animation--container"
+  initial={{
+    opacity: 1,
+    display: "flex",
+    alignSelf: "center",
+    justifySelf: "center",
+    width: "100%",
+    height: "100vh",
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    margin: "auto",
+    zIndex: "999",
+    background: "white",
+  }}
+  transition={{
+    duration: 6,
+  }}
+  animate={{
+    opacity: [1, 1, 1, 1, 1, 1, 0],
+  }}
+  onAnimationComplete={handleAnimationComplete}
+>
+  <LePrestigeNewLogoAnimated />
+</motion.div>
+    {/* <motion.div className="animation--container"
       initial={{
         opacity: 1,
         display: "flex",
@@ -58,9 +86,9 @@ export const Starter = () => {
       onAnimationComplete={handleAnimationComplete}
     >
       <LePrestigeNewLogoAnimated />
-    </motion.div>
+    </motion.div> */}
 
-      {animationComplete && <PopupBanner />}
+      {/* {animationComplete && <PopupBanner />} */}
     </div>
   )
 }

@@ -6,7 +6,7 @@ import member04 from "../assets/images/team/JULIANA-min.webp"
 import member05 from "../assets/images/team/Raquel-min.webp"
 import member06 from "../assets/images/team/SIMON-min.webp"
 import member07 from "../assets/images/team/FREDERICO-min.webp"
-import member08 from "../assets/images/team/KEVIN-min.webp"
+// import member08 from "../assets/images/team/KEVIN-min.webp"
 import member09 from "../assets/images/team/TONY-min.webp"
 
 export const cardTeam01 = [
@@ -131,13 +131,13 @@ export const cardTeamAll = [
         title:"Project Manager",
         description: "Presenting Frederico, a valuable addition to our team stepping into the role of Project Manager. Endowed with a commitment to excellence and a resolute determination, Frederico's potential shines brightly. His fresh perspective and vibrant energy infuse a renewed sense of vigor into our projects. Guided by a strategic mindset and an unwavering dedication to delivering results, Frederico approaches challenges with enthusiasm. His proactive nature and adaptability make him an indispensable asset to our team's success. Experience firsthand the transformative impact of Frederico's passion and drive as he embraces his role, contributing his unique qualities to our projects and carving a distinctive path as a Project Manager."
     },
-	{
-        id: "cardTeam008",
-        img: member08,
-        name:"KEVIN",
-        title:"Project Manager",
-        description: "Meet Kevin, our adept Project Manager specializing in high-end construction. With a meticulous approach and a wealth of experience, Kevin navigates the complexities of luxury projects with finesse. His deep understanding of design intricacies and construction nuances sets him apart. Kevin's attention to detail ensures that every element of a project aligns seamlessly, resulting in exquisite outcomes. His leadership and expertise make him a cornerstone of our high-end construction ventures. Witness firsthand the impact of Kevin's dedicated management as he orchestrates projects to perfection, elevating the world of luxury construction to new dimensions."
-    },
+	// {
+    //     id: "cardTeam008",
+    //     img: member08,
+    //     name:"KEVIN",
+    //     title:"Project Manager",
+    //     description: "Meet Kevin, our adept Project Manager specializing in high-end construction. With a meticulous approach and a wealth of experience, Kevin navigates the complexities of luxury projects with finesse. His deep understanding of design intricacies and construction nuances sets him apart. Kevin's attention to detail ensures that every element of a project aligns seamlessly, resulting in exquisite outcomes. His leadership and expertise make him a cornerstone of our high-end construction ventures. Witness firsthand the impact of Kevin's dedicated management as he orchestrates projects to perfection, elevating the world of luxury construction to new dimensions."
+    // },
     {
         id: "cardTeam009",
         img: member09,

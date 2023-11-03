@@ -131,7 +131,7 @@ export const ConstructionsProjects = ({ headTitle, projects }) => {
                             ? "h-stretch"
                             :  "v-stretch"
                     }>
-                        <Link onClick={() => showBigIMG(0)}  to={`${title07.replace(/\s/g , "-").toLowerCase()}`}>
+                        <Link onClick={() => showBigIMG(0)}  to={`${title012.replace(/\s/g , "-").toLowerCase()}`}>
                             {/* <img className="image--saturation fit-image" src={coverIMG_007} alt={title07}/> */}
                             <img className="image--saturation fit-image" src={coverIMG_012} alt={title012}/>
                         </Link>
@@ -142,7 +142,7 @@ export const ConstructionsProjects = ({ headTitle, projects }) => {
                             ? "h-stretch"
                             :  "v-stretch"
                     }>
-                        <Link onClick={() => showBigIMG(0)}  to={`${title08.replace(/\s/g , "-").toLowerCase()}`}>
+                        <Link onClick={() => showBigIMG(0)}  to={`${title011.replace(/\s/g , "-").toLowerCase()}`}>
                             {/* <img className="image--saturation fit-image" src={coverIMG_008} alt={title08}/> */}
                             <img className="image--saturation fit-image" src={coverIMG_011} alt={title011}/>
                             
@@ -154,7 +154,7 @@ export const ConstructionsProjects = ({ headTitle, projects }) => {
                             ? "h-stretch"
                             :  "min-stretch"
                     }>
-                        <Link onClick={() => showBigIMG(0)}  to={`${title06.replace(/\s/g , "-").toLowerCase()}`}>
+                        <Link onClick={() => showBigIMG(0)}  to={`${title09.replace(/\s/g , "-").toLowerCase()}`}>
                             {/* <img className="image--saturation fit-image" src={coverIMG_006} alt={title06}/> */}
                             <img className="image--saturation fit-image" src={coverIMG_009} alt={title09}/>
                         </Link>
